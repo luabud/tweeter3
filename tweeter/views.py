@@ -14,7 +14,7 @@ def index(request):
     if bob:
         login(request, bob)
 
-    return render(request, 'tweeter/index.html')
+    return render(request, 'tweeter/tweeter.html')
 
 
 class UserViewSet(viewsets.ModelViewSet):

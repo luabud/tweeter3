@@ -59,7 +59,7 @@ DB_PASSWORD="db_password"
 DB_NAME="db_name"
 DB_HOST="db_host"
 
-DJANGO_SETTINGS_MODULE="tweeter3.settings.production"
+DJANGO_SETTINGS_MODULE="tweeter3.settings"
 SECRET_KEY="my-secret-key"
 
 # For deployment purposes, configure the Azure App Service Hostname
