@@ -14,9 +14,9 @@ router.register(r'tweets', views.TweetViewSet)
 router.register(r'profile', views.UserViewSet)
 
 urlpatterns = [
+    url(r'^profile', views.profile, name='profile'),
     url(r'^$', views.index, name='index'),
     path('admin/', admin.site.urls),
     url(r'^api/', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    url(r'^profile/', views.profile, name=('profile'))
 ]
