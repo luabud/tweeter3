@@ -16,6 +16,12 @@ def index(request):
 
     return render(request, 'tweeter/tweeter.html')
 
+def profile(request):
+    bob = User.objects.filter(first_name='Bob').first()
+    if bob:
+        login(request, bob)
+        
+    return render(request, 'tweeter/profile.html')
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
@@ -30,3 +36,4 @@ class TweetViewSet(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
+

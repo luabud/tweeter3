@@ -34,9 +34,9 @@ angular.module('tweeterApp', [
                 templateUrl: 'static/tweeter/partials/tweet-list.html',
                 controller: 'UserCtrl',
             })
-            .state('profile', {
-                url: '/profile/:userId',
-                templateUrl: 'static/tweeter/partials/profile.html',
-                controller: 'UserCtrl',
-            })
+            // .state('profile', {
+            //     url: '/profile/:userId',
+            //     templateUrl: 'static/tweeter/partials/profile.html',
+            //     controller: 'UserCtrl',
+            // })
     });
