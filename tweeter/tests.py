@@ -14,7 +14,7 @@ class TestUsers(unittest.TestCase):
         self.assertEqual(user2.username,'')
     def test_user_permission(self):
         pass
-        
+
 class TestTweets(unittest.TestCase):
     def test_tweet_creation(self):
         time = datetime.now()
@@ -32,7 +32,7 @@ class TestTweets(unittest.TestCase):
 
     def test_serializer_validation(self):
         ts = TweetSerializer()
-        self.assertRaises(serializers.ValidationError,ts.validatSe_text,"hi!")
+        self.assertRaises(serializers.ValidationError,ts.validate_text,"hi!")
         self.assertRaises(serializers.ValidationError,ts.validate_text," ")
         self.assertRaises(serializers.ValidationError,ts.validate_text,"  " * 71)
         self.assertEqual(ts.validate_text("  " * 70),"  "* 70)
