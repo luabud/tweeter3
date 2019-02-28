@@ -16,13 +16,6 @@ def index(request):
 
     return render(request, 'tweeter/tweeter.html')
 
-def profile(request):
-    bob = User.objects.filter(first_name='Bob').first()
-    if bob:
-        login(request, bob)
-        
-    return render(request, 'tweeter/profile.html')
-
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
