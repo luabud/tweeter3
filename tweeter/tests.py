@@ -23,6 +23,14 @@ class TestTweets(unittest.TestCase):
         self.assertEqual(tweet.user.username, 'bob')
         self.assertEqual(tweet.timestamp, time)
 
+        time = datetime(2010,10,10,10,10)
+        tweet = Tweet(text = "    ", user=User(username='amy'), timestamp = time)
+        self.assertEqual(tweet.text,  "    ")
+        self.assertEqual(tweet.user.username, 'amy')
+        self.assertEqual(tweet.timestamp, time)
+
+    
+    def test_tweet_creation_notunicode(self):
         time = datetime(year=2010,month=10,day=10,hour=10,minute=10,second=10)
         tweet = Tweet(text = "Hi� Ý'm ßoß ձ", user=User(username='ßoß'), timestamp = time)
         self.assertEqual(tweet.text,  "Hi� Ý'm ßoß ձ")
