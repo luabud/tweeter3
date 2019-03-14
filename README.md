@@ -20,7 +20,7 @@ Tweeter3 is a basic example Django application that uses [Django Rest Framework]
     On Windows:
      ```shell
     $ py -m venv env
-    $ env\bin\activate
+    $ env\Scripts\activate
     ```
     On MacOs/Linux:
     ```shell
