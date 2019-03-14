@@ -16,10 +16,17 @@ Tweeter3 is a basic example Django application that uses [Django Rest Framework]
     $ cd connect_python_azure
     ```
 1. Create a new virtual environment using Python 3.7 and activate it.
+    On Windows:
+     ```shell
+    $ py -m venv env
+    $ env\bin\activate
+    ```
+    On MacOs/Linux:
     ```shell
     $ python3 -m venv env
     $ source env/bin/activate
     ```
+    
 1. Install dependencies from requirements.txt:
     ```shell
     (env)$ pip install -r requirements.txt
