@@ -29,7 +29,7 @@ Tweeter3 is a basic example Django application that uses [Django Rest Framework]
     ```shell
     (env)$ python manage.py migrate
     ```
-1. *(Optionally)* load sample fixtures that will populate the database with a handful of users and tweeters.
+1. Load sample fixtures that will populate the database with a handful of users and tweeters.
 
     **Note:** If fixtures are loaded, a sample user named 'Bob' will always be logged in by default.
     ```shell
